@@ -103,7 +103,12 @@ Examples:
     doubleValuesWithMap([1,-2,-3]) // [2,-4,-6]
 */
 
-function doubleValuesWithMap(arr) {}
+function doubleValuesWithMap(arr) {
+    let doubleVals = arr.map(function(value) {
+        return value * 2;
+    });
+    return doubleVals;
+}
 
 /*
 Write a function called valTimesIndex which accepts an array and returns a new array with each value multiplied by the index it is currently at in the array.
@@ -114,7 +119,10 @@ Examples:
 */
 
 function valTimesIndex(arr){
-    
+    let result = arr.map(function(value, index) {
+        return value * index;
+    });
+    return result;
 }
 
 /*
@@ -125,7 +133,10 @@ Examples:
 */
 
 function extractKey(arr, key){
-    
+    let result = arr.map(function(value) {
+        return value[key];
+    })
+    return result;
 }
 
 /*
@@ -136,7 +147,10 @@ Examples:
 */
 
 function extractFullName(arr){
-    
+    let result = arr.map(function(value) {
+        return value["first"] + " " + value["last"];
+    })
+    return result;
 }
 
 /*
